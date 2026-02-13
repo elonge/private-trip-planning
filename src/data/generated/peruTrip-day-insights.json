@@ -1,0 +1,554 @@
+{
+  "planId": "peruTrip",
+  "planTitle": "The Altitude-Smart Peru Adventure",
+  "generatedAt": "2026-02-13T13:24:01.494Z",
+  "model": "gpt-4.1-mini",
+  "days": [
+    {
+      "day": 1,
+      "title": "Coastal Welcome",
+      "location": "Miraflores, Lima",
+      "summary": "Land in Lima, settle into Miraflores, and walk the Malecon for Pacific views and sunset air.",
+      "phaseId": "lima",
+      "phaseName": "Phase 1: Lima",
+      "highlights": [
+        {
+          "title": "Settle into Miraflores Accommodation",
+          "description": "Check into your hotel or rental in Miraflores to acclimate and rest after your flight."
+        },
+        {
+          "title": "Walk the Malecon for Pacific Views",
+          "description": "Stroll along the clifftop Malecon boardwalk to enjoy panoramic views of the Pacific Ocean."
+        },
+        {
+          "title": "Catch the Sunset at Parque del Amor",
+          "description": "Visit Parque del Amor to watch the sunset and admire the famous mosaic walls."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Miraflores Malecon at sunset",
+          "searchQuery": "Miraflores Malecon sunset Peru",
+          "whyRelevant": "Captures the iconic coastal views and sunset ambiance of day one."
+        },
+        {
+          "subject": "Parque del Amor mosaic walls",
+          "searchQuery": "Parque del Amor Lima mosaic",
+          "whyRelevant": "Highlights a unique cultural landmark visited during the evening walk."
+        },
+        {
+          "subject": "Pacific Ocean from Lima cliffs",
+          "searchQuery": "Pacific Ocean Lima cliffs Peru",
+          "whyRelevant": "Showcases the natural beauty visible from the Malecon."
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Culture and Catacombs",
+      "location": "Centro Historico, Lima",
+      "summary": "Visit Plaza de Armas and explore the San Francisco Monastery catacombs in the historic center.",
+      "phaseId": "lima",
+      "phaseName": "Phase 1: Lima",
+      "highlights": [
+        {
+          "title": "Explore Plaza de Armas",
+          "description": "Visit Lima’s historic main square to see colonial architecture and vibrant street life."
+        },
+        {
+          "title": "Tour San Francisco Monastery Catacombs",
+          "description": "Take a guided tour of the monastery’s catacombs and learn about its history."
+        },
+        {
+          "title": "Sample Local Street Food Nearby",
+          "description": "Try traditional snacks such as anticuchos or picarones near the historic center."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Plaza de Armas Lima",
+          "searchQuery": "Plaza de Armas Lima Peru",
+          "whyRelevant": "Shows the central historic hub visited on day two."
+        },
+        {
+          "subject": "San Francisco Monastery catacombs",
+          "searchQuery": "San Francisco Monastery catacombs Lima",
+          "whyRelevant": "Highlights the unique underground site explored."
+        },
+        {
+          "subject": "Peruvian street food Lima",
+          "searchQuery": "Peruvian street food Lima",
+          "whyRelevant": "Captures the culinary experience near the historic center."
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Barranco and Food",
+      "location": "Barranco -> Cusco -> Sacred Valley",
+      "summary": "Explore Barranco street art, enjoy a classic Peruvian lunch, then fly to Cusco and transfer by van to the Sacred Valley.",
+      "phaseId": "lima",
+      "phaseName": "Phase 1: Lima",
+      "highlights": [
+        {
+          "title": "Discover Barranco Street Art",
+          "description": "Walk through Barranco’s colorful streets to admire vibrant murals and urban art."
+        },
+        {
+          "title": "Enjoy a Classic Peruvian Lunch",
+          "description": "Dine at a local restaurant in Barranco to savor ceviche or lomo saltado."
+        },
+        {
+          "title": "Fly to Cusco and Transfer to Sacred Valley",
+          "description": "Take an afternoon flight to Cusco and use a pre-arranged van for a smooth transfer to the Sacred Valley."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Barranco street art murals",
+          "searchQuery": "Barranco street art Lima Peru",
+          "whyRelevant": "Illustrates the vibrant art scene explored in the morning."
+        },
+        {
+          "subject": "Peruvian ceviche dish",
+          "searchQuery": "Peruvian ceviche Lima",
+          "whyRelevant": "Represents the classic lunch enjoyed before departure."
+        },
+        {
+          "subject": "Sacred Valley landscape",
+          "searchQuery": "Sacred Valley Cusco Peru",
+          "whyRelevant": "Depicts the destination reached after the flight and transfer."
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Pisac Ruins",
+      "location": "Pisac",
+      "summary": "Explore Incan terraces at Pisac and browse the market before a relaxed evening.",
+      "phaseId": "sacred-valley",
+      "phaseName": "Phase 2: The Sacred Valley",
+      "highlights": [
+        {
+          "title": "Explore Pisac Incan Terraces",
+          "description": "Hike around the well-preserved agricultural terraces and learn about Incan farming techniques."
+        },
+        {
+          "title": "Browse Pisac Market",
+          "description": "Shop for handmade textiles, ceramics, and souvenirs at the vibrant Pisac market."
+        },
+        {
+          "title": "Relax in the Evening at Your Accommodation",
+          "description": "Unwind after the day’s activities with a quiet evening in the Sacred Valley."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Pisac Incan terraces",
+          "searchQuery": "Pisac Incan terraces Sacred Valley",
+          "whyRelevant": "Shows the main archaeological site visited."
+        },
+        {
+          "subject": "Pisac artisan market",
+          "searchQuery": "Pisac market textiles Peru",
+          "whyRelevant": "Captures the colorful local market experience."
+        },
+        {
+          "subject": "Sacred Valley sunset",
+          "searchQuery": "Sacred Valley sunset Peru",
+          "whyRelevant": "Reflects the relaxing evening atmosphere."
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "Maras and Moray",
+      "location": "Maras and Moray",
+      "summary": "Visit the Maras Salt Mines and the circular terraces at Moray, with an optional ATV adventure.",
+      "phaseId": "sacred-valley",
+      "phaseName": "Phase 2: The Sacred Valley",
+      "highlights": [
+        {
+          "title": "Visit Maras Salt Mines",
+          "description": "Walk among the terraced salt evaporation ponds and learn about traditional salt harvesting."
+        },
+        {
+          "title": "Explore Moray Circular Terraces",
+          "description": "Tour the unique Incan agricultural experiment site with its concentric terraces."
+        },
+        {
+          "title": "Optional ATV Adventure",
+          "description": "Older teens and adults can take an ATV tour around Maras for an adrenaline boost."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Maras salt mines terraces",
+          "searchQuery": "Maras salt mines Peru",
+          "whyRelevant": "Highlights the distinctive salt ponds visited."
+        },
+        {
+          "subject": "Moray circular terraces",
+          "searchQuery": "Moray Incan terraces Peru",
+          "whyRelevant": "Shows the archaeological site’s unique design."
+        },
+        {
+          "subject": "ATV tour Sacred Valley",
+          "searchQuery": "ATV tour Maras Peru",
+          "whyRelevant": "Represents the optional adventure activity."
+        }
+      ]
+    },
+    {
+      "day": 6,
+      "title": "Ollantaytambo",
+      "location": "Ollantaytambo",
+      "summary": "Tour one of the best-preserved living Incan towns and its fortress ruins.",
+      "phaseId": "sacred-valley",
+      "phaseName": "Phase 2: The Sacred Valley",
+      "highlights": [
+        {
+          "title": "Tour Ollantaytambo Fortress",
+          "description": "Explore the well-preserved Incan fortress and learn its historical significance."
+        },
+        {
+          "title": "Wander Ollantaytambo Town",
+          "description": "Stroll through the cobblestone streets of this living Incan town with traditional shops."
+        },
+        {
+          "title": "Visit Local Artisan Workshops",
+          "description": "Discover local crafts and textiles by visiting artisan workshops in town."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Ollantaytambo fortress ruins",
+          "searchQuery": "Ollantaytambo fortress Peru",
+          "whyRelevant": "Captures the main archaeological highlight of the day."
+        },
+        {
+          "subject": "Ollantaytambo town streets",
+          "searchQuery": "Ollantaytambo town Peru",
+          "whyRelevant": "Shows the charming living town environment."
+        },
+        {
+          "subject": "Peruvian textiles Ollantaytambo",
+          "searchQuery": "Ollantaytambo artisan textiles",
+          "whyRelevant": "Highlights local craftsmanship encountered."
+        }
+      ]
+    },
+    {
+      "day": 7,
+      "title": "The Train Journey",
+      "location": "Ollantaytambo -> Aguas Calientes",
+      "summary": "Ride from Ollantaytambo to Aguas Calientes, explore town, and prep for an early entry.",
+      "phaseId": "machu-picchu",
+      "phaseName": "Phase 3: Machu Picchu",
+      "highlights": [
+        {
+          "title": "Train Ride to Aguas Calientes",
+          "description": "Enjoy scenic views on the train journey from Ollantaytambo to the gateway town of Machu Picchu."
+        },
+        {
+          "title": "Explore Aguas Calientes Town",
+          "description": "Walk around the small town, visit local markets, and relax before the Machu Picchu visit."
+        },
+        {
+          "title": "Prepare Gear for Early Machu Picchu Entry",
+          "description": "Organize tickets, water, and clothing for an early start the next day."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Train Ollantaytambo to Aguas Calientes",
+          "searchQuery": "train Ollantaytambo Aguas Calientes Peru",
+          "whyRelevant": "Depicts the iconic journey to Machu Picchu."
+        },
+        {
+          "subject": "Aguas Calientes town",
+          "searchQuery": "Aguas Calientes Peru",
+          "whyRelevant": "Shows the town where travelers stay before visiting Machu Picchu."
+        },
+        {
+          "subject": "Machu Picchu hiking gear",
+          "searchQuery": "Machu Picchu hiking preparation",
+          "whyRelevant": "Represents the preparation needed for the next day’s early entry."
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "title": "The Lost City",
+      "location": "Machu Picchu",
+      "summary": "Enter Machu Picchu early, with optional Huayna Picchu permits for fit hikers, then return by evening train toward Cusco.",
+      "phaseId": "machu-picchu",
+      "phaseName": "Phase 3: Machu Picchu",
+      "highlights": [
+        {
+          "title": "Early Entry to Machu Picchu",
+          "description": "Arrive at Machu Picchu at opening time to avoid crowds and enjoy the site in morning light."
+        },
+        {
+          "title": "Optional Huayna Picchu Hike",
+          "description": "For fit hikers with permits, climb Huayna Picchu for panoramic views of the ruins."
+        },
+        {
+          "title": "Return by Evening Train to Cusco",
+          "description": "Take the train back to Ollantaytambo and transfer to Cusco by van in the evening."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Machu Picchu sunrise",
+          "searchQuery": "Machu Picchu sunrise Peru",
+          "whyRelevant": "Captures the early morning experience at the Lost City."
+        },
+        {
+          "subject": "Huayna Picchu summit view",
+          "searchQuery": "Huayna Picchu summit Peru",
+          "whyRelevant": "Highlights the optional challenging hike."
+        },
+        {
+          "subject": "Train returning to Cusco",
+          "searchQuery": "train Machu Picchu to Cusco Peru",
+          "whyRelevant": "Shows the journey back after the day’s exploration."
+        }
+      ]
+    },
+    {
+      "day": 9,
+      "title": "Settling Into the Heights",
+      "location": "Cusco",
+      "summary": "Take a relaxed day at Plaza de Armas and ease into Cusco's higher elevation.",
+      "phaseId": "cusco",
+      "phaseName": "Phase 4: Cusco",
+      "highlights": [
+        {
+          "title": "Relax at Plaza de Armas Cusco",
+          "description": "Spend a leisurely day strolling the main square, enjoying cafes and people-watching."
+        },
+        {
+          "title": "Acclimate to Cusco’s Altitude",
+          "description": "Take it easy and hydrate well to help your body adjust to the higher elevation."
+        },
+        {
+          "title": "Visit Nearby Artisan Shops",
+          "description": "Browse local crafts and souvenirs around the Plaza de Armas at a relaxed pace."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Plaza de Armas Cusco",
+          "searchQuery": "Plaza de Armas Cusco Peru",
+          "whyRelevant": "Shows the central gathering spot for day nine."
+        },
+        {
+          "subject": "Cusco altitude acclimatization",
+          "searchQuery": "Cusco altitude Peru",
+          "whyRelevant": "Represents the importance of adjusting to the elevation."
+        },
+        {
+          "subject": "Cusco artisan shops",
+          "searchQuery": "Cusco artisan market Peru",
+          "whyRelevant": "Highlights local crafts available near the plaza."
+        }
+      ]
+    },
+    {
+      "day": 10,
+      "title": "Saqsaywaman Fortress",
+      "location": "Saqsaywaman",
+      "summary": "Visit the monumental stone fortress above Cusco for sweeping views and dramatic family photos.",
+      "phaseId": "cusco",
+      "phaseName": "Phase 4: Cusco",
+      "highlights": [
+        {
+          "title": "Visit Saqsaywaman Fortress",
+          "description": "Explore the massive stone walls and terraces of this Incan fortress overlooking Cusco."
+        },
+        {
+          "title": "Take Panoramic Photos of Cusco",
+          "description": "Capture sweeping views of the city from the fortress’s elevated vantage points."
+        },
+        {
+          "title": "Enjoy a Family Picnic on Site",
+          "description": "Bring snacks to enjoy a relaxed picnic while soaking in the historic atmosphere."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Saqsaywaman stone walls",
+          "searchQuery": "Saqsaywaman fortress Cusco Peru",
+          "whyRelevant": "Illustrates the monumental Incan architecture visited."
+        },
+        {
+          "subject": "Panoramic views Cusco from Saqsaywaman",
+          "searchQuery": "Cusco panoramic view Saqsaywaman",
+          "whyRelevant": "Shows the scenic vistas available at the site."
+        },
+        {
+          "subject": "Family picnic Saqsaywaman",
+          "searchQuery": "family picnic Saqsaywaman Cusco",
+          "whyRelevant": "Represents the relaxed family moment during the visit."
+        }
+      ]
+    },
+    {
+      "day": 11,
+      "title": "San Blas and Artisans",
+      "location": "San Blas, Cusco",
+      "summary": "Wander San Blas lanes, browse workshops, and try a chocolate-making session.",
+      "phaseId": "cusco",
+      "phaseName": "Phase 4: Cusco",
+      "highlights": [
+        {
+          "title": "Wander San Blas Artisan Lanes",
+          "description": "Explore narrow streets filled with artisan workshops and galleries."
+        },
+        {
+          "title": "Browse Local Handicrafts",
+          "description": "Shop for unique souvenirs including textiles, ceramics, and jewelry."
+        },
+        {
+          "title": "Participate in a Chocolate-Making Session",
+          "description": "Join a hands-on workshop to learn about Peruvian cacao and make your own chocolate."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "San Blas artisan workshops",
+          "searchQuery": "San Blas artisan workshops Cusco",
+          "whyRelevant": "Highlights the creative atmosphere of the neighborhood."
+        },
+        {
+          "subject": "Peruvian handicrafts San Blas",
+          "searchQuery": "San Blas handicrafts Cusco",
+          "whyRelevant": "Shows the local artisan products available for purchase."
+        },
+        {
+          "subject": "Chocolate-making workshop Cusco",
+          "searchQuery": "chocolate making workshop Cusco Peru",
+          "whyRelevant": "Depicts the interactive cultural activity offered."
+        }
+      ]
+    },
+    {
+      "day": 12,
+      "title": "Adventure Day or Slow Day",
+      "location": "Rainbow Mountain or Cusco",
+      "summary": "Choose an early Rainbow Mountain hike or split the group for spa time and museum browsing.",
+      "phaseId": "cusco",
+      "phaseName": "Phase 4: Cusco",
+      "highlights": [
+        {
+          "title": "Early Rainbow Mountain Hike",
+          "description": "Depart before dawn for a challenging hike to Rainbow Mountain, enjoying spectacular colorful landscapes."
+        },
+        {
+          "title": "Spa and Relaxation Option",
+          "description": "For those skipping the hike, enjoy spa treatments to recover and rejuvenate."
+        },
+        {
+          "title": "Visit Cusco Museums",
+          "description": "Explore museums such as the Inka Museum or Museo de Arte Precolombino for cultural enrichment."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Rainbow Mountain colorful landscape",
+          "searchQuery": "Rainbow Mountain Peru",
+          "whyRelevant": "Captures the iconic natural beauty of the optional hike."
+        },
+        {
+          "subject": "Cusco spa interior",
+          "searchQuery": "Cusco spa Peru",
+          "whyRelevant": "Represents the relaxing alternative to the hike."
+        },
+        {
+          "subject": "Inka Museum Cusco",
+          "searchQuery": "Inka Museum Cusco Peru",
+          "whyRelevant": "Highlights cultural activities available on a slow day."
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "title": "Final Shopping",
+      "location": "San Pedro Market, Cusco",
+      "summary": "Visit San Pedro Market for gifts and alpaca goods, then close with live Andean music over dinner.",
+      "phaseId": "cusco",
+      "phaseName": "Phase 4: Cusco",
+      "highlights": [
+        {
+          "title": "Shop at San Pedro Market",
+          "description": "Browse fresh produce, spices, and alpaca goods for authentic gifts and souvenirs."
+        },
+        {
+          "title": "Purchase Alpaca Textiles and Crafts",
+          "description": "Select high-quality alpaca scarves, sweaters, and handicrafts from local vendors."
+        },
+        {
+          "title": "Enjoy Live Andean Music at Dinner",
+          "description": "End the day with traditional music and dinner at a local Cusco restaurant."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "San Pedro Market stalls",
+          "searchQuery": "San Pedro Market Cusco Peru",
+          "whyRelevant": "Shows the bustling market atmosphere."
+        },
+        {
+          "subject": "Alpaca textiles Cusco",
+          "searchQuery": "alpaca textiles Cusco Peru",
+          "whyRelevant": "Highlights popular souvenirs available."
+        },
+        {
+          "subject": "Live Andean music Cusco restaurant",
+          "searchQuery": "live Andean music Cusco Peru",
+          "whyRelevant": "Captures the cultural dining experience."
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "title": "Departure",
+      "location": "Cusco -> Lima -> Home",
+      "summary": "Morning return flight from Cusco through Lima and onward home.",
+      "phaseId": "cusco",
+      "phaseName": "Phase 4: Cusco",
+      "highlights": [
+        {
+          "title": "Prepare for Morning Flight from Cusco",
+          "description": "Pack and check out early to ensure timely arrival at the airport."
+        },
+        {
+          "title": "Allow Comfortable Transfer Times",
+          "description": "Schedule flights with ample connection time through Lima to avoid stress."
+        },
+        {
+          "title": "Reflect on the Trip During Transit",
+          "description": "Use travel time to relax and reminisce about the Peru adventure."
+        }
+      ],
+      "photos": [
+        {
+          "subject": "Cusco airport departure",
+          "searchQuery": "Cusco airport Peru",
+          "whyRelevant": "Represents the start of the journey home."
+        },
+        {
+          "subject": "Flight connection Lima airport",
+          "searchQuery": "Lima airport Peru",
+          "whyRelevant": "Highlights the transfer point for international flights."
+        },
+        {
+          "subject": "Traveler reflecting on trip",
+          "searchQuery": "travel reflection airport",
+          "whyRelevant": "Symbolizes the end of the adventure and travel downtime."
+        }
+      ]
+    }
+  ]
+}
