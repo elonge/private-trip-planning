@@ -13,11 +13,17 @@ export interface TripDay {
   videoUrl?: string;
 }
 
+export interface TripBlog {
+  title: string;
+  url: string;
+}
+
 export interface TripPhase {
   id: string;
   name: string;
   description: string;
   altitudeNote: string;
+  blogs: TripBlog[];
   days: TripDay[];
 }
 

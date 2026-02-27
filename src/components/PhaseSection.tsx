@@ -22,6 +22,24 @@ export function PhaseSection({ phase, phaseIndex, startOffset }: PhaseSectionPro
         <p className="mt-3 inline-block rounded-full bg-terracotta/15 px-3 py-1 text-xs font-semibold tracking-wide text-charcoal/85">
           {phase.altitudeNote}
         </p>
+        {phase.blogs.length > 0 ? (
+          <div className="mt-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-charcoal/70">Blogs</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {phase.blogs.map((blog) => (
+                <a
+                  key={`${phase.id}-${blog.url}`}
+                  href={blog.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full border border-charcoal/20 bg-white px-3 py-1 text-xs font-semibold text-charcoal/85 transition hover:border-terracotta/40 hover:text-terracotta focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta/45"
+                >
+                  {blog.title}
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : null}
       </div>
 
       <div className="relative space-y-8">
@@ -31,9 +49,13 @@ export function PhaseSection({ phase, phaseIndex, startOffset }: PhaseSectionPro
           const globalIndex = startOffset + dayIndex;
           const align = globalIndex % 2 === 0 ? "left" : "right";
           const columnClass = align === "left" ? "md:col-start-1" : "md:col-start-3";
+          const rowOffsetClass = dayIndex > 0 ? "md:-mt-4" : "";
 
           return (
-            <div key={day.day} className="relative md:grid md:grid-cols-[1fr_auto_1fr] md:items-start">
+            <div
+              key={day.day}
+              className={`relative md:grid md:grid-cols-[1fr_auto_1fr] md:items-start ${rowOffsetClass}`}
+            >
               <div className={columnClass}>
                 <DayCard day={day} align={align} delayMs={150 + globalIndex * 40} />
               </div>

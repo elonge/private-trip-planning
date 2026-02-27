@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "scrape:photos": "node scripts/scrapePagePhotos.mjs",
     "generate:day-insights:build": "tsc scripts/generateTripPlanDayInsights.ts --outDir .tmp/scripts --module commonjs --target es2022 --moduleResolution node --esModuleInterop --skipLibCheck",
     "generate:day-insights": "npm run generate:day-insights:build --silent && node .tmp/scripts/scripts/generateTripPlanDayInsights.js"
   },

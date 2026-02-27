@@ -263,6 +263,17 @@ export const peruTrip: TripPlan = {
       name: "Phase 1: Lima",
       description: "A coastal warm-up with food, history, and easy walking before altitude.",
       altitudeNote: "Near sea level: ideal for recovery from the flight and family pacing.",
+      blogs: [
+        { title: "Lima in 3 Days (Jane's Midlife Journey)", url: "https://janesmidlifejourney.uk/2023/11/14/lima-in-3-days/" },
+        {
+          title: "Lima Travel Guide (Heather Jasper)",
+          url: "https://heatherjasper.com/peru-blogs-travel-tips/weekend-in-lima"
+        },
+        {
+          title: "Top 7 things to do in Lima [video]",
+          url: "https://www.youtube.com/watch?v=csgil74hrAI"
+        }
+      ],
       days: [
         {
           day: 1,
@@ -275,7 +286,7 @@ export const peruTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/Miraflores-Lima.jpg",
           photoAlt:
             "The green cliffs of the Miraflores boardwalk (Malecón) overlooking the Pacific Ocean.",
-          videoUrl: "http://www.youtube.com/watch?v=AUyJjgHCW7I" // Top 10 Things To Do In Lima
+          videoUrl: "https://www.youtube.com/watch?v=ou-QJmkwIz8" // Miraflores, Lima: A Perfect Day Exploring the Coast
         },
         {
           day: 2,
@@ -288,7 +299,7 @@ export const peruTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/Convento_San_Francisco_en_Lima.jpg",
           photoAlt:
             "The yellow colonial facade of the San Francisco Monastery in downtown Lima.",
-          videoUrl: "http://www.youtube.com/watch?v=hq-NB-YUevM" // Catacombs Lima Peru: A Chilling Underground Adventure
+          videoUrl: "https://www.youtube.com/shorts/4OwYuRVEP-0" // The Plaza Mayor de Lima or Plaza de Armas de Lima
         },
         {
           day: 3,
@@ -312,6 +323,17 @@ export const peruTrip: TripPlan = {
       description: "Lower elevation exploration with big scenery and active days.",
       altitudeNote:
         "Lower than Cusco: this phase is the acclimatization bridge before higher elevations.",
+      blogs: [
+        { title: "Sacred Valley Travel Guide (Gypsy Sols)", url: "https://www.gypsysols.com/sacred-valley-travel-guide-a-3-day-itinerary/" },
+        {
+          title: "Sacred Valley Weekend Guide (Heather Jasper)",
+          url: "https://heatherjasper.com/peru-blogs-travel-tips/sacred-valley-las-qolqas"
+        },
+        {
+          title: "Top 7 Things to Do in the Sacred Valley [video]",
+          url: "https://www.youtube.com/watch?v=5FlMw5QiQyM"
+        }
+      ],
       days: [
         {
           day: 4,
@@ -360,6 +382,12 @@ export const peruTrip: TripPlan = {
       name: "Phase 3: Machu Picchu",
       description: "A two-day peak experience centered on rail travel and an early citadel visit.",
       altitudeNote: "Plan early starts and slower pacing to balance excitement and stamina.",
+      blogs: [
+        {
+          title: "Machu Picchu Update (Heather Jasper)",
+          url: "https://heatherjasper.com/peru-blogs-travel-tips/inca-trail-2026-update"
+        },
+      ],
       days: [
         {
           day: 7,
@@ -386,7 +414,7 @@ export const peruTrip: TripPlan = {
           note: "Huayna Picchu permits are limited and should be booked months ahead.",
           photoAlt:
             "A breathtaking view of the Inca citadel of Machu Picchu perched on the mountain ridge.",
-          videoUrl: "http://www.youtube.com/watch?v=SkG2W_ANM4k" // Huayna Picchu: The Thrilling Hike Above Machu Picchu
+          videoUrl: "https://www.youtube.com/watch?v=XWhbhOTuaHs" // Machu Picchu Travel Guide: How to Visit the Lost City of the Incas
         }
       ]
     },
@@ -395,6 +423,13 @@ export const peruTrip: TripPlan = {
       name: "Phase 4: Cusco",
       description: "Five days to settle in, explore history, and finish with local markets and music.",
       altitudeNote: "About 3,400m: easier after Sacred Valley acclimatization.",
+      blogs: [
+        { title: "Top 10 Things to Do in Cusco [video]", url: "https://www.youtube.com/watch?v=PIvEUe_0R6Q" },
+        {
+          title: "Cusco Travel Guide (Heather Jasper)",
+          url: "https://heatherjasper.com/cusco"
+        }
+      ],
       days: [
         {
           day: 9,
@@ -407,7 +442,7 @@ export const peruTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/The_Plaza_de_Armas_of_Cusco.jpg",
           photoAlt:
             "The Plaza de Armas in Cusco featuring the colonial Cathedral and central fountain.",
-          videoUrl: "http://www.youtube.com/watch?v=PIvEUe_0R6Q" // Top 10 Things to Do in Cusco
+          videoUrl: "https://www.youtube.com/watch?v=cnu601-gAIA" // A Perfect Day in Cusco: Plaza de Armas, San Blas, and More
         },
         {
           day: 10,
@@ -420,7 +455,7 @@ export const peruTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/Sacsayhuam%C3%A1n_walls.jpg",
           photoAlt:
             "The giant zig-zagging megalithic stone walls of the Saqsaywaman fortress.",
-          videoUrl: "http://www.youtube.com/watch?v=Wzs5r-34ItI" // Inca Engineering & Seismic Secrets: Sacsayhuamán
+          videoUrl: "https://www.youtube.com/watch?v=vtTx4Dpa5xo" // Inca Engineering & Seismic Secrets: Sacsayhuamán
         },
         {
           day: 11,
@@ -448,7 +483,7 @@ export const peruTrip: TripPlan = {
           note: "Rainbow Mountain is optional and physically demanding due to altitude and early departure.",
           photoAlt:
             "The colorful mineral stripes of Vinicunca (Rainbow Mountain) under a bright blue sky.",
-          videoUrl: "http://www.youtube.com/watch?v=fj2kq4kH6Cg" // Rainbow Mountain Peru Hike Guide
+          videoUrl: "https://www.youtube.com/watch?v=w_zQAldcR5w" // Rainbow Mountain Peru Hike Guide
         },
         {
           day: 13,
@@ -461,7 +496,7 @@ export const peruTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/San_Pedro_Market_-_Cusco.jpg",
           photoAlt:
             "The exterior and bustling entrance of the San Pedro Market in Cusco.",
-          videoUrl: "http://www.youtube.com/watch?v=TXYVdKXxtP0" // Peru Local Market STREET FOOD Tour of San Pedro Market
+          videoUrl: "https://www.youtube.com/watch?v=TXYVdKXxtP0" // Peru Local Market STREET FOOD Tour of San Pedro Market
         },
         {
           day: 14,
