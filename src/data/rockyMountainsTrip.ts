@@ -1,3 +1,4 @@
+import { url } from "inspector/promises";
 import type { TripPlan } from "../types/trip";
 
 export const nycRockiesTrip: TripPlan = {
@@ -168,9 +169,13 @@ export const nycRockiesTrip: TripPlan = {
         "Canmore is around 1,400m (4,600ft). Drink plenty of water to adjust.",
       blogs: [
         {
-          title: "Canmore vs Banff: Where to Stay",
-          url: "https://thebanffblog.com/canmore-vs-banff/",
+          title: "Banff (Lametayel)",
+          url: "https://www.lametayel.co.il/posts/d4lx99",
         },
+        {
+          title: "Banff (Lametayel) - 5 ימים בהרי הרוקי הקנדיים",
+          url: "https://www.lametayel.co.il/posts/n580vv",
+        }
       ],
       videoUrls: [
         "https://www.youtube.com/watch?v=xJl6ETnVHKE",
@@ -244,8 +249,8 @@ export const nycRockiesTrip: TripPlan = {
         "Elevations range up to 2,000m on the Parkway. Layered clothing is essential.",
       blogs: [
         {
-          title: "Icefields Parkway Itinerary",
-          url: "https://thebanffblog.com/icefields-parkway-stops/",
+          title: "My 3-Day Family Vacation to Jasper National Park",
+          url: "https://www.jasper.travel/blog/my-3-day-family-vacation-jasper-national-park/",
         },
       ],
       videoUrls: [

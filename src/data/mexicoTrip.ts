@@ -168,9 +168,12 @@ export const nycMexicoTrip: TripPlan = {
         "Mexico City sits at 2,240m (7,350ft). Take the first day a bit slower to acclimate.",
       blogs: [
         {
-          title: "Mexico City Itinerary (Earth Trekkers)",
-          url: "https://www.earthtrekkers.com/mexico-city-itinerary-5-days/",
-        },
+          title: "Mexico City Travel Guide (Eternal Spring)",
+          url: "https://www.eternalspringcdmx.com/p/mexico-city-6-things-to-do-with-kids-zoo-park-balloon-boats-bikes",
+        },{
+          title: "Mexico City with Kids (Lametayel)",
+          url: "https://www.lametayel.co.il/posts/olpdnx",
+        }
       ],
       videoUrls: [
         "https://www.youtube.com/watch?v=gaiZ50ffN1U",
@@ -260,9 +263,13 @@ export const nycMexicoTrip: TripPlan = {
         "Oaxaca sits at roughly 1,555m (5,100ft), a comfortable step down from Mexico City.",
       blogs: [
         {
-          title: "Oaxaca Travel Guide (Earth Trekkers)",
-          url: "https://www.earthtrekkers.com/things-to-do-in-oaxaca/",
+          title: "Oaxaca Travel Guide (Adventurous Kate)",
+          url: "https://www.adventurouskate.com/things-to-do-in-oaxaca-mexico/",
         },
+        {
+          title: "The Ultimate Guide to Oaxaca, Mexico",
+          url: "https://www.bontraveler.com/oaxaca-mexico/",
+        }
       ],
       videoUrls: ["https://www.youtube.com/watch?v=wu30KBibysc","https://www.youtube.com/watch?v=lhRDcfuGMHc"],
       days: [

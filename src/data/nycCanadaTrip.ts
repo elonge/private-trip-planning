@@ -205,8 +205,8 @@ export const nycCanadaTrip: TripPlan = {
       altitudeNote: "Sea level to rolling hills.",
       blogs: [
         { 
-          title: "Jacques-Cartier Destination Guide", 
-          url: "https://jacques-cartier.com/en/destination/" 
+          title: "Quebec City Travel Guide (Lametayel)", 
+          url: "https://www.lametayel.co.il/posts/xvkkj5" 
         }
       ],
       videoUrls: [
@@ -264,9 +264,13 @@ export const nycCanadaTrip: TripPlan = {
       altitudeNote: "Coastal and mountainous mix.",
       blogs: [
         { 
-          title: "Whale Watching in Quebec", 
-          url: "https://www.quebecmaritime.ca/en/blog/whale-watching" 
-        }
+          title: "Charlevoix Travel Guide (Authentik Canada)", 
+          url: "https://www.authentikcanada.com/en/blog/english-charlevoix-quebec-the-practical-guide" 
+        },
+        {
+          title: "Charlevoix (Light in Leaves)",
+          url: "https://light-in-leaves.blogspot.com/2024/10/charlevoix.html"
+        },
       ],
       videoUrls: [
         "https://www.youtube.com/watch?v=4m7O9ZVIDVY",
