@@ -11,8 +11,9 @@ interface PhaseSectionProps {
 export function PhaseSection({ phase, phaseIndex, startOffset }: PhaseSectionProps) {
   return (
     <section
+      id={`phase-${phase.id}`}
       aria-labelledby={`${phase.id}-title`}
-      className="rounded-3xl border border-charcoal/10 bg-gradient-to-b from-white to-sand/35 px-4 py-8 md:px-8 md:py-10"
+      className="scroll-mt-8 rounded-3xl border border-charcoal/10 bg-gradient-to-b from-white to-sand/35 px-4 py-8 md:scroll-mt-10 md:px-8 md:py-10"
     >
       <div className="mb-8 border-b border-charcoal/10 pb-6">
         <p className="text-xs font-semibold uppercase tracking-[0.14em] text-terracotta">Phase {phaseIndex + 1}</p>

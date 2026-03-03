@@ -4,8 +4,15 @@ import { useEffect, useMemo, useRef } from "react";
 
 import type { RouteStop } from "@/types/trip";
 
+interface PhaseNavItem {
+  id: string;
+  name: string;
+  dayCount: number;
+}
+
 interface PeruRouteMapProps {
   stops: RouteStop[];
+  phaseNavItems?: PhaseNavItem[];
   title?: string;
   description?: string;
   ariaLabel?: string;
@@ -13,6 +20,7 @@ interface PeruRouteMapProps {
 
 export function PeruRouteMap({
   stops,
+  phaseNavItems = [],
   title = "Route Snapshot",
   description = "Live OpenStreetMap view of your route progression.",
   ariaLabel = "OpenStreetMap route map for the selected trip"
@@ -26,6 +34,17 @@ export function PeruRouteMap({
   const routePositions = useMemo(() => {
     return orderedStops.map((stop) => [stop.lat, stop.lng] as [number, number]);
   }, [orderedStops]);
+
+  const normalizedPhaseItems = useMemo(
+    () =>
+      phaseNavItems.map((phase) => ({
+        ...phase,
+        cleanName: phase.name.replace(/^Phase \d+:\s*/, "")
+      })),
+    [phaseNavItems]
+  );
+
+  const canRenderPhaseNav = normalizedPhaseItems.length > 0;
 
   useEffect(() => {
     let map: { remove: () => void } | null = null;
@@ -90,6 +109,15 @@ export function PeruRouteMap({
     };
   }, [orderedStops, routePositions]);
 
+  const scrollToPhase = (phaseId: string) => {
+    const section = document.getElementById(`phase-${phaseId}`);
+    if (!section) {
+      return;
+    }
+
+    section.scrollIntoView({ behavior: "smooth", block: "start" });
+  };
+
   return (
     <section
       aria-labelledby="route-map-title"
@@ -109,12 +137,37 @@ export function PeruRouteMap({
         </p>
       </div>
 
-      <div className="overflow-hidden rounded-2xl border border-charcoal/10">
-        <div
-          ref={mapRef}
-          aria-label={ariaLabel}
-          className="h-[320px] w-full md:h-[460px]"
-        />
+      <div className={`grid gap-4 md:gap-6 ${canRenderPhaseNav ? "lg:grid-cols-[minmax(0,1.65fr)_minmax(16rem,1fr)]" : ""}`}>
+        <div className="overflow-hidden rounded-2xl border border-charcoal/10">
+          <div
+            ref={mapRef}
+            aria-label={ariaLabel}
+            className="h-[320px] w-full md:h-[460px]"
+          />
+        </div>
+
+        {canRenderPhaseNav ? (
+          <aside className="rounded-2xl border border-charcoal/10 bg-sand/20 p-4 md:p-5">
+            <h3 className="text-sm font-semibold uppercase tracking-[0.14em] text-charcoal/75">Jump To Phase</h3>
+            <p className="mt-2 text-sm text-charcoal/75">
+              Click any phase to scroll to its timeline section.
+            </p>
+            <div className="mt-4 space-y-2">
+              {normalizedPhaseItems.map((phase, index) => (
+                <button
+                  key={phase.id}
+                  type="button"
+                  onClick={() => scrollToPhase(phase.id)}
+                  className="w-full rounded-xl border border-charcoal/15 bg-white px-3 py-3 text-left transition hover:border-terracotta/45 hover:bg-linen focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta/45"
+                >
+                  <p className="text-xs font-semibold uppercase tracking-[0.12em] text-terracotta">Phase {index + 1}</p>
+                  <p className="mt-1 text-sm font-semibold text-charcoal">{phase.cleanName}</p>
+                  <p className="mt-1 text-xs text-charcoal/70">{phase.dayCount} days</p>
+                </button>
+              ))}
+            </div>
+          </aside>
+        ) : null}
       </div>
     </section>
   );

@@ -50,6 +50,11 @@ export default async function Home({ searchParams }: HomeProps) {
     }
   }
   const routeSummary = routeLabels.join(" -> ");
+  const phaseNavItems = plan.phases.map((phase) => ({
+    id: phase.id,
+    name: phase.name,
+    dayCount: phase.days.length
+  }));
 
   return (
     <>
@@ -114,6 +119,7 @@ export default async function Home({ searchParams }: HomeProps) {
 
         <PeruRouteMap
           stops={plan.routeStops}
+          phaseNavItems={phaseNavItems}
           description={`Live OpenStreetMap view of your route across ${routeLabels.join(", ")}.`}
           ariaLabel={`OpenStreetMap route map for ${plan.title}`}
         />
