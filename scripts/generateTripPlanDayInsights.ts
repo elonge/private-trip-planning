@@ -1,10 +1,10 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import { peruTrip } from "../src/data/peruTrip";
+import { defaultTripPlanId, tripPlans } from "../src/data/trips";
 import type { TripDay, TripPlan } from "../src/types/trip";
 
-type PlanKey = "peruTrip";
+type PlanKey = keyof typeof tripPlans;
 
 interface DayInput extends TripDay {
   phaseId: string;
@@ -60,8 +60,12 @@ interface OutputPayload {
 }
 
 const availablePlans: Record<PlanKey, TripPlan> = {
-  peruTrip,
+  ...tripPlans,
 };
+
+function isPlanKey(value: string): value is PlanKey {
+  return value in tripPlans;
+}
 
 function getArgValue(flag: string): string | undefined {
   const index = process.argv.indexOf(flag);
@@ -145,7 +149,7 @@ async function generateDayContent(params: {
   const { apiKey, model, planTitle, days } = params;
 
   const systemPrompt =
-    "You are a detail-oriented Peru travel editor. Output only valid JSON. For each day, provide exactly 3 practical highlights and 2-4 relevant photo ideas. Keep content specific to the provided itinerary context and avoid generic filler.";
+    "You are a detail-oriented travel editor. Output only valid JSON. For each day, provide exactly 3 practical highlights and 2-4 relevant photo ideas. Keep content specific to the provided itinerary context and avoid generic filler.";
 
   const userPayload = {
     tripTitle: planTitle,
@@ -223,12 +227,12 @@ async function generateDayContent(params: {
 }
 
 async function main() {
-  const planArg = getArgValue("--plan") ?? "peruTrip";
-  if (planArg !== "peruTrip") {
-    throw new Error(`Unknown plan "${planArg}". Currently supported: peruTrip.`);
+  const planArg = getArgValue("--plan") ?? defaultTripPlanId;
+  if (!isPlanKey(planArg)) {
+    throw new Error(`Unknown plan "${planArg}". Currently supported: ${Object.keys(tripPlans).join(", ")}.`);
   }
 
-  const planId = planArg as PlanKey;
+  const planId: PlanKey = planArg;
   const plan = availablePlans[planId];
   const days = flattenDays(plan).sort((a, b) => a.day - b.day);
 

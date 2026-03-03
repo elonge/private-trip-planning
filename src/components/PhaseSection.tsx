@@ -1,4 +1,5 @@
 import { DayCard } from "@/components/DayCard";
+import { PhaseVideoList } from "@/components/PhaseVideoList";
 import type { TripPhase } from "@/types/trip";
 
 interface PhaseSectionProps {
@@ -40,6 +41,8 @@ export function PhaseSection({ phase, phaseIndex, startOffset }: PhaseSectionPro
             </div>
           </div>
         ) : null}
+
+        <PhaseVideoList phaseId={phase.id} videoUrls={phase.videoUrls} />
       </div>
 
       <div className="relative space-y-8">

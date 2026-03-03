@@ -2,9 +2,10 @@ import type { TripPlan } from "@/types/trip";
 
 interface HeroProps {
   plan: TripPlan;
+  routeSummary: string;
 }
 
-export function Hero({ plan }: HeroProps) {
+export function Hero({ plan, routeSummary }: HeroProps) {
   return (
     <header className="relative isolate min-h-[80vh] overflow-hidden border-b border-white/10 text-linen">
       <img
@@ -26,7 +27,7 @@ export function Hero({ plan }: HeroProps) {
             {plan.durationDays} Days
           </span>
           <span className="rounded-full border border-linen/30 bg-charcoal/35 px-4 py-2 font-semibold tracking-wide">
-            {"Lima -> Sacred Valley -> Machu Picchu -> Cusco"}
+            {routeSummary}
           </span>
         </div>
       </div>

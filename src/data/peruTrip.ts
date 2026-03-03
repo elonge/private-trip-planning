@@ -274,6 +274,11 @@ export const peruTrip: TripPlan = {
           url: "https://www.youtube.com/watch?v=csgil74hrAI"
         }
       ],
+      videoUrls: [
+        "https://www.youtube.com/watch?v=ou-QJmkwIz8",
+        "https://www.youtube.com/shorts/4OwYuRVEP-0",
+        "http://www.youtube.com/watch?v=cYDYMol2-SQ"
+      ],
       days: [
         {
           day: 1,
@@ -334,6 +339,11 @@ export const peruTrip: TripPlan = {
           url: "https://www.youtube.com/watch?v=5FlMw5QiQyM"
         }
       ],
+      videoUrls: [
+        "http://www.youtube.com/watch?v=KzC0tpoH3MI",
+        "http://www.youtube.com/watch?v=jabBMPvoVa0",
+        "http://www.youtube.com/watch?v=FZpwUFehRTQ"
+      ],
       days: [
         {
           day: 4,
@@ -388,6 +398,10 @@ export const peruTrip: TripPlan = {
           url: "https://heatherjasper.com/peru-blogs-travel-tips/inca-trail-2026-update"
         },
       ],
+      videoUrls: [
+        "http://www.youtube.com/watch?v=wRgPh4fpJkI",
+        "https://www.youtube.com/watch?v=XWhbhOTuaHs"
+      ],
       days: [
         {
           day: 7,
@@ -429,6 +443,14 @@ export const peruTrip: TripPlan = {
           title: "Cusco Travel Guide (Heather Jasper)",
           url: "https://heatherjasper.com/cusco"
         }
+      ],
+      videoUrls: [
+        "https://www.youtube.com/watch?v=cnu601-gAIA",
+        "https://www.youtube.com/watch?v=vtTx4Dpa5xo",
+        "http://www.youtube.com/watch?v=ool1S537PPM",
+        "https://www.youtube.com/watch?v=w_zQAldcR5w",
+        "https://www.youtube.com/watch?v=TXYVdKXxtP0",
+        "http://www.youtube.com/watch?v=JM-XCMdV63U"
       ],
       days: [
         {

@@ -1,4 +1,20 @@
-export type TravelMode = "flight" | "van" | "train" | "walk" | "hike" | "free";
+export type TravelMode =
+  | "flight"
+  | "van"
+  | "train"
+  | "walk"
+  | "hike"
+  | "free"
+  | "boat"
+  | "bus"
+  | "bike"
+  | "ferry"
+  | "car"
+  | "canoe"
+  | "kayak"
+  | "flight & car"
+  | "other"
+  | (string & {});
 
 export interface TripDay {
   day: number;
@@ -24,6 +40,7 @@ export interface TripPhase {
   description: string;
   altitudeNote: string;
   blogs: TripBlog[];
+  videoUrls: string[];
   days: TripDay[];
 }
 

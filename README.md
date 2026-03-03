@@ -17,6 +17,11 @@ npm run dev
 
 Open `http://localhost:3000`.
 
+To switch plans via URL:
+
+- `http://localhost:3000` (default `nycCanadaTrip`)
+- `http://localhost:3000/?trip=nycCanadaTrip`
+
 ## Build
 
 ```bash
@@ -35,13 +40,15 @@ OPENAI_API_KEY=your_key_here npm run generate:day-insights
 Optional arguments:
 
 ```bash
-OPENAI_API_KEY=your_key_here npm run generate:day-insights -- --plan peruTrip --out src/data/generated/peruTrip-day-insights.json
+OPENAI_API_KEY=your_key_here npm run generate:day-insights -- --plan nycCanadaTrip --out src/data/generated/nycCanadaTrip-day-insights.json
 ```
 
 Defaults:
-- `--plan peruTrip`
-- `--out src/data/generated/peruTrip-day-insights.json`
+- `--plan nycCanadaTrip`
+- `--out src/data/generated/nycCanadaTrip-day-insights.json`
 - `OPENAI_MODEL` falls back to `gpt-4.1-mini`
+
+Supported plan ids come from `src/data/trips.ts`.
 
 ## Project Structure
 

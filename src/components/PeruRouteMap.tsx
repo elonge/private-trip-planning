@@ -6,9 +6,17 @@ import type { RouteStop } from "@/types/trip";
 
 interface PeruRouteMapProps {
   stops: RouteStop[];
+  title?: string;
+  description?: string;
+  ariaLabel?: string;
 }
 
-export function PeruRouteMap({ stops }: PeruRouteMapProps) {
+export function PeruRouteMap({
+  stops,
+  title = "Route Snapshot",
+  description = "Live OpenStreetMap view of your route progression.",
+  ariaLabel = "OpenStreetMap route map for the selected trip"
+}: PeruRouteMapProps) {
   const mapRef = useRef<HTMLDivElement | null>(null);
 
   const orderedStops = useMemo(() => {
@@ -68,7 +76,7 @@ export function PeruRouteMap({ stops }: PeruRouteMapProps) {
 
         leafletMap.fitBounds(L.latLngBounds(routePositions), { padding: [90, 90] });
       } else {
-        leafletMap.setView([-13.2, -73.2], 5);
+        leafletMap.setView([0, 0], 2);
       }
     }
 
@@ -90,10 +98,10 @@ export function PeruRouteMap({ stops }: PeruRouteMapProps) {
       <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
         <div>
           <h2 id="route-map-title" className="font-display text-2xl text-charcoal md:text-3xl">
-            Route Snapshot
+            {title}
           </h2>
           <p className="mt-2 max-w-xl text-sm text-charcoal/75">
-            Live OpenStreetMap view of your coast-to-Andes progression.
+            {description}
           </p>
         </div>
         <p className="rounded-full bg-sand px-4 py-1 text-xs font-semibold uppercase tracking-[0.13em] text-charcoal/80">
@@ -104,7 +112,7 @@ export function PeruRouteMap({ stops }: PeruRouteMapProps) {
       <div className="overflow-hidden rounded-2xl border border-charcoal/10">
         <div
           ref={mapRef}
-          aria-label="OpenStreetMap route map showing Lima, Sacred Valley, Machu Picchu, Cusco, and return to Lima"
+          aria-label={ariaLabel}
           className="h-[320px] w-full md:h-[460px]"
         />
       </div>
