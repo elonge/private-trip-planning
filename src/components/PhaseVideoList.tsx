@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { getVideoEmbedUrl } from "@/lib/video";
 
 interface PhaseVideoListProps {
   phaseId: string;
@@ -14,46 +15,6 @@ interface PhaseVideoItem {
   embedUrl: string | null;
 }
 
-function getEmbedUrl(sourceUrl: string): string | null {
-  try {
-    const parsed = new URL(sourceUrl);
-    const host = parsed.hostname.replace(/^www\./, "").replace(/^m\./, "");
-
-    if (host === "youtu.be") {
-      const videoId = parsed.pathname.slice(1);
-      return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : null;
-    }
-
-    if (host === "youtube.com") {
-      if (parsed.pathname === "/watch") {
-        const videoId = parsed.searchParams.get("v");
-        return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : null;
-      }
-
-      if (parsed.pathname.startsWith("/shorts/")) {
-        const videoId = parsed.pathname.split("/")[2] ?? "";
-        return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : null;
-      }
-
-      if (parsed.pathname.startsWith("/embed/")) {
-        const videoId = parsed.pathname.split("/")[2] ?? "";
-        return videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : null;
-      }
-
-      if (parsed.pathname === "/results") {
-        const searchQuery = parsed.searchParams.get("search_query");
-        return searchQuery
-          ? `https://www.youtube.com/embed?listType=search&list=${encodeURIComponent(searchQuery)}`
-          : null;
-      }
-    }
-
-    return null;
-  } catch {
-    return null;
-  }
-}
-
 export function PhaseVideoList({ phaseId, videoUrls }: PhaseVideoListProps) {
   const videos = useMemo<PhaseVideoItem[]>(
     () =>
@@ -61,7 +22,7 @@ export function PhaseVideoList({ phaseId, videoUrls }: PhaseVideoListProps) {
         id: `${phaseId}-video-${index + 1}`,
         label: `Video ${index + 1}`,
         sourceUrl,
-        embedUrl: getEmbedUrl(sourceUrl)
+        embedUrl: getVideoEmbedUrl(sourceUrl)
       })),
     [phaseId, videoUrls]
   );
@@ -129,7 +90,7 @@ export function PhaseVideoList({ phaseId, videoUrls }: PhaseVideoListProps) {
               Close
             </button>
             {activeVideo.embedUrl ? (
-              <div className="relative w-full overflow-hidden rounded-xl bg-black pb-[56.25%] shadow-2xl">
+              <div className="relative h-[88dvh] w-full overflow-hidden rounded-xl bg-black shadow-2xl md:h-auto md:pb-[56.25%]">
                 <iframe
                   src={activeVideo.embedUrl}
                   title={activeVideo.label}

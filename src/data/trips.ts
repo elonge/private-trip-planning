@@ -1,11 +1,13 @@
 import type { TripPlan } from "../types/trip";
 
 import { nycCanadaTrip } from "./nycCanadaTrip";
+import { nycRockiesTrip } from "./rockyMountainsTrip";
 import { peruTrip } from "./peruTrip";
 
 export const tripPlans = {
   peruTrip,
-  nycCanadaTrip
+  nycCanadaTrip,
+  nycRockiesTrip
 } satisfies Record<string, TripPlan>;
 
 export type TripPlanId = keyof typeof tripPlans;

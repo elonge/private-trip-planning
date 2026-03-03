@@ -36,12 +36,12 @@ export const nycCanadaTrip: TripPlan = {
         }
       ],
       videoUrls: [
-        "https://www.youtube.com/shorts/qAMR2-EDA2c",
+        "https://www.youtube.com/watch?v=XnJZ90ha5oM",
         "https://www.youtube.com/shorts/n2iuL9y74Gk",
         "https://www.youtube.com/shorts/4eAYUQXdJLI",
         "https://www.youtube.com/shorts/FTpjYmTQUcY",
         "https://www.youtube.com/watch?v=RyvFc_Aht8Y",
-        "https://www.youtube.com/shorts/DAkWGRmTKCs",
+        "https://www.youtube.com/watch?v=TXiT9ci7Xsg",
       ],
       days: [
         {
@@ -55,7 +55,7 @@ export const nycCanadaTrip: TripPlan = {
             "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/97/38/c7/one-of-my-favourite-places.jpg?w=900&h=500&s=1",
           photoAlt:
             "Bright billboards and taxis in Times Square.",
-          videoUrl: "https://www.youtube.com/results?search_query=times+square+walking+tour"
+          videoUrl: "https://www.youtube.com/watch?v=XnJZ90ha5oM"
         },
         {
           day: 2,
@@ -121,7 +121,7 @@ export const nycCanadaTrip: TripPlan = {
           note: "A great transition to nature before the Canada trip.",
           photoAlt:
             "View of the Hudson River and Bear Mountain Bridge.",
-          videoUrl: "https://www.youtube.com/shorts/DAkWGRmTKCs"
+          videoUrl: "https://www.youtube.com/watch?v=TXiT9ci7Xsg"
         },
         {
           day: 7,
@@ -150,6 +150,7 @@ export const nycCanadaTrip: TripPlan = {
         }
       ],
       videoUrls: [
+        "https://www.youtube.com/watch?v=rZKZRk2GqFQ",
         "https://www.youtube.com/shorts/nPBy7UNzmjI",
         "https://www.youtube.com/watch?v=kKLxzW4YJEI",
       ],
@@ -166,7 +167,7 @@ export const nycCanadaTrip: TripPlan = {
           note: "Stock up on groceries in Montreal or Saint-Jovite before arriving at the Airbnb.",
           photoAlt:
             "The colorful pedestrian village of Mont Tremblant resort.",
-          videoUrl: "https://www.youtube.com/watch?v=FJhFhbjWEtI"
+          videoUrl: "https://www.youtube.com/watch?v=rZKZRk2GqFQ"
         },
         {
           day: 9,
@@ -193,7 +194,7 @@ export const nycCanadaTrip: TripPlan = {
           optional: true,
           photoAlt:
             "The serene waters of Lac Tremblant surrounded by mountains.",
-          videoUrl: "https://www.youtube.com/shorts/DAkWGRmTKCs"
+          videoUrl: "https://www.youtube.com/shorts/N-o2al8J6NY"
         }
       ]
     },
@@ -226,7 +227,7 @@ export const nycCanadaTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/Château_Frontenac_at_night,_Quebec_City,_Canada.jpg",
           photoAlt:
             "The majestic Château Frontenac towering over the historic lower town of Quebec City at night.",
-          videoUrl: "https://www.youtube.com/results?search_query=old+quebec+city+walking+tour"
+          videoUrl: "https://www.youtube.com/watch?v=OE995KsdooA"
         },
         {
           day: 12,
@@ -252,7 +253,7 @@ export const nycCanadaTrip: TripPlan = {
             "https://hotelchateaulaurier.com/wp-content/uploads/2021/06/tejas-shah-vjin5kwcz18-unsplash.jpg",
           photoAlt:
             "The powerful Montmorency Falls crashing into the basin below.",
-          videoUrl: "https://www.youtube.com/results?search_query=montmorency+falls+quebec"
+          videoUrl: "https://www.youtube.com/watch?v=uPPYSmNU_1k"
         }
       ]
     },
@@ -285,7 +286,7 @@ export const nycCanadaTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/Baie-Saint-Paul.jpg",
           photoAlt:
             "The quaint, artistic village of Baie-Saint-Paul nestled in a valley.",
-          videoUrl: "https://www.youtube.com/results?search_query=charlevoix+quebec+road+trip"
+          videoUrl: "https://www.youtube.com/watch?v=4m7O9ZVIDVY"
         },
         {
           day: 15,
@@ -299,7 +300,7 @@ export const nycCanadaTrip: TripPlan = {
           note: "Dress very warmly, as the wind on the water is cold even in September.",
           photoAlt:
             "A minke whale breaching the surface of the waters near Tadoussac.",
-          videoUrl: "https://www.youtube.com/results?search_query=tadoussac+whale+watching"
+          videoUrl: "https://www.youtube.com/watch?v=O8FGO5gRXIQ"
         },
         {
           day: 16,
@@ -312,7 +313,7 @@ export const nycCanadaTrip: TripPlan = {
             "https://commons.wikimedia.org/wiki/Special:FilePath/Hautes-Gorges-de-la-Rivière-Malbaie.jpg",
           photoAlt:
             "High, dramatic rock faces plunging into the Malbaie River.",
-          videoUrl: "https://www.youtube.com/results?search_query=hautes+gorges+de+la+riviere+malbaie"
+          videoUrl: "https://www.youtube.com/watch?v=eOZ_OtKvRbw"
         },
         {
           day: 17,
@@ -326,7 +327,7 @@ export const nycCanadaTrip: TripPlan = {
           note: "Ensure plenty of time for the drive back to the airport.",
           photoAlt:
             "Planes parked at the gates of a busy international airport.",
-          videoUrl: "https://www.youtube.com/results?search_query=montreal+airport+departure"
+          // videoUrl: "https://www.youtube.com/watch?v=OE995KsdooA"
         }
       ]
     }
