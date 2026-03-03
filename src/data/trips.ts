@@ -12,6 +12,12 @@ export const tripPlans = {
 
 export type TripPlanId = keyof typeof tripPlans;
 
+const tripDisplayNames: Record<TripPlanId, string> = {
+  peruTrip: "Peru Adventure",
+  nycCanadaTrip: "NYC + Eastern Canada",
+  nycRockiesTrip: "NYC + Canadian Rockies"
+};
+
 export const defaultTripPlanId: TripPlanId = "nycCanadaTrip";
 
 function isTripPlanId(value: string): value is TripPlanId {
@@ -20,6 +26,10 @@ function isTripPlanId(value: string): value is TripPlanId {
 
 export function getTripPlanIds(): TripPlanId[] {
   return Object.keys(tripPlans) as TripPlanId[];
+}
+
+export function getTripDisplayName(tripId: TripPlanId): string {
+  return tripDisplayNames[tripId];
 }
 
 export function resolveTripPlan(rawTripId?: string | null): {

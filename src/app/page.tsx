@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Hero } from "@/components/Hero";
 import { PeruRouteMap } from "@/components/PeruRouteMap";
 import { PhaseSection } from "@/components/PhaseSection";
-import { defaultTripPlanId, getTripPlanIds, resolveTripPlan } from "@/data/trips";
+import { defaultTripPlanId, getTripDisplayName, getTripPlanIds, resolveTripPlan } from "@/data/trips";
 
 interface HomeProps {
   searchParams?: Promise<{
@@ -88,7 +88,7 @@ export default async function Home({ searchParams }: HomeProps) {
                       : "border-charcoal/20 bg-white text-charcoal/85 hover:border-terracotta/40 hover:text-terracotta"
                   }`}
                 >
-                  {tripId}
+                  {getTripDisplayName(tripId)}
                 </Link>
               );
             })}
