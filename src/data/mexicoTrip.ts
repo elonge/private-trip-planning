@@ -538,7 +538,7 @@ export const hollandMexicoTrip: TripPlan = {
           summary:
             "Take a guided tour of the city center. Visit the Diego Rivera murals, the Zocalo, Templo Mayor ruins, and Palacio de Bellas Artes. Lunch at Azul Historico for tortilla soup.",
           location: "Centro Historico",
-          travelMode: "walk",
+          travelMode: "walk & Guide",
           photos: [
             {
               url: "https://upload.wikimedia.org/wikipedia/commons/0/04/Palacio_Nacional_Murals_view.JPG",
@@ -571,7 +571,7 @@ export const hollandMexicoTrip: TripPlan = {
           summary:
             "A packed Saturday! Visit the Anthropology Museum (1.5h) and Soumaya Museum. Shop at the exclusive weekend market El Bazar Sábado, see Frida Kahlo's Blue House in Coyoacán, and ride the Xochimilco gondolas. Dinner at Gabs.",
           location: "Coyoacán & Xochimilco",
-          travelMode: "car",
+          travelMode: "car & Guide",
           photos: [
             {
               url: "https://q-xx.bstatic.com/xdata/images/xphoto/800x800/204450206.jpg?k=188d4d616110daaabd23a311eb34b787db0be5aa0d2f28e4a1f4e46b788b3e56&o=",
@@ -604,7 +604,7 @@ export const hollandMexicoTrip: TripPlan = {
           summary:
             "Early guided start (leave by 5 AM if choosing the hot air balloon) to explore the colossal Teotihuacan pyramids. Focus on the Sun Pyramid (Gate 5) and Quetzalcoatl. Visit the Basilica of Guadalupe on the return.",
           location: "Teotihuacan",
-          travelMode: "van",
+          travelMode: "van & Guide",
           photos: [
             {
               url: "https://upload.wikimedia.org/wikipedia/commons/3/3b/2020-02-11_Teotihuacan_la_Avenida_de_los_Muertos_y_la_Pir%C3%A1mide_del_Sol.jpg",
