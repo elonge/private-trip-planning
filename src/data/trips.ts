@@ -24,7 +24,7 @@ const tripDisplayNames: Record<TripPlanId, string> = {
   frieslandFamilyTrip: "Friesland Family Trip"
 };
 
-export const defaultTripPlanId: TripPlanId = "nycCanadaTrip";
+export const defaultTripPlanId: TripPlanId = "hollandMexicoTrip";
 
 function isTripPlanId(value: string): value is TripPlanId {
   return value in tripPlans;

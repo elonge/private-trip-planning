@@ -394,31 +394,72 @@ export const hollandMexicoTrip: TripPlan = {
         "https://www.youtube.com/watch?v=CTRXKZ4-xWs"
       ],
       days: [
-        {
+                {
           day: 1,
+          title: "Welcome to Holland",
+          summary:
+            "Arrive in Amsterdam Schiphol Airport and take a scenic 1.5-hour drive to Heeg, a charming lakeside village in Friesland. Settle into your accommodation and enjoy a relaxing evening by the water.",
+          location: "Heeg",
+          travelMode: "flight",
+          photos: [
+            {
+              url: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Amsterdam_Schiphol_Airport_entrance.jpg",
+              alt: "The entrance of Amsterdam Schiphol Airport."
+            },
+            {
+              url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/79/6e/5a/afsluitdijk.jpg?w=1200&h=700&s=1",
+              alt: "The Afsluitdijk, a major causeway in the Netherlands."
+            },
+          ],
+          videoUrl: "https://www.youtube.com/watch?v=CTRXKZ4-xWs"
+        },
+        {
+          day: 2,
           title: "Leeuwarden: Culture & Wildlife",
           summary:
             "Visit the Nature Museum Fryslân for the 'Underwater Safari' and explore AquaZoo Friesland to walk among lemurs and see polar bears.",
           location: "Leeuwarden",
           travelMode: "car",
-          photoUrl:
-            "https://commons.wikimedia.org/wiki/Special:FilePath/7196_Aquazoo.Leeuwarden.GroteWielen.jpg?width=1200",
-          photoAlt: "Animals roaming at AquaZoo Leeuwarden.",
+          photos: [
+            {
+              url: "https://assets.plaece.nl/odp-friesland/image/0336f01bbef0a6a891db3f3d322e57ac440bce45_0198b4a9-869f-70c4-ad8d-a9d73d6ef48c.jpg",
+              alt: "A child peering through the glass at the underwater exhibits in the Nature Museum Fryslân."
+            },
+            {
+              url: "https://assets.plaece.nl/thumb/unejsX8w_gxRu6NS8O00_dp508vKD0rgm0GFtu0NfEo/resizing_type:fit/width:650/height:366/gravity:sm/aHR0cHM6Ly9hc3NldHMucGxhZWNlLm5sL29kcC1sZWV1d2FyZGVuL2ltYWdlL2xyLW9uZGVyd2F0ZXJzYWZhcmktMTJfNDA5NDczNjIyMi5qcGVn.jpeg",
+              alt: "Animals roaming at AquaZoo Leeuwarden."
+            },
+            {
+              url: "https://cdn.museum.nl/assets/906af423-1c12-44c3-b5d7-f4b7bbed88d8?w=3000&c=f4689782de3eaf46349bd1249a38765fe7cb327f6d7e6847eea02310ee852389",
+              alt: "A family enjoying the interactive underwater exhibits at the Nature Museum Fryslân."
+            }
+          ],
           videoUrl: "https://www.youtube.com/watch?v=CTRXKZ4-xWs"
         },
         {
-          day: 2,
+          day: 3,
           title: "Sneek & Franeker: Stars & Ships",
           summary:
             "Marvel at the world's oldest working planetarium in Franeker (UNESCO World Heritage) and discover maritime history at the children's museum in Sneek.",
           location: "Franeker & Sneek",
           travelMode: "car",
-          photoUrl:
-            "https://commons.wikimedia.org/wiki/Special:FilePath/Planetarium_Eise_Eisinga_in_Franeker.jpg?width=1200",
-          photoAlt: "The intricate mechanical ceiling of the Eise Eisinga Planetarium."
+          photos: [
+            {
+              url: "https://commons.wikimedia.org/wiki/Special:FilePath/Planetarium_Eise_Eisinga_in_Franeker.jpg?width=1200",
+              alt: "The intricate mechanical ceiling of the Eise Eisinga Planetarium."
+            },
+            {
+              url: "https://amsterdamian.com/wp-content/uploads/2024/08/DSC01118-7.jpg",
+              alt: "The historic harbor and boats of Sneek, a charming Frisian town."
+            },
+            {
+              url: "https://c8.alamy.com/comp/AKPJM1/sneek-netherlands-friesland-fryslan-historic-history-town-city-holland-AKPJM1.jpg",
+              alt: "The picturesque canals and historic buildings of Sneek, a key stop in the Frisian lake district."
+            }
+          ],
         },
         {
-          day: 3,
+          day: 4,
           title: "Terherne: Adventure on the Water",
           summary:
             "Head to Kameleon Avonturen Eiland for mud trails, raft building, and old-fashioned outdoor play. Bring a change of clothes!",
@@ -430,7 +471,7 @@ export const hollandMexicoTrip: TripPlan = {
           note: "Very high chance of getting wet/muddy. Recommended for ages 6+."
         },
         {
-          day: 4,
+          day: 5,
           title: "Ameland: Island Escape",
           summary:
             "Take the ferry from Holwerd to Ameland. Rent bikes to see the red lighthouse, visit expansive beaches, and try mudflat hiking.",
@@ -441,7 +482,7 @@ export const hollandMexicoTrip: TripPlan = {
           photoAlt: "The bright red and white lighthouse of Ameland."
         },
         {
-          day: 5,
+          day: 6,
           title: "Appelscha: Forests & Thrills",
           summary:
             "Enjoy the all-inclusive Duinen Zathe Amusement Park, then explore the massive sand dunes of Drents-Friese Wold National Park.",
@@ -466,7 +507,7 @@ export const hollandMexicoTrip: TripPlan = {
       ],
       days: [
         {
-          day: 6,
+          day: 7,
           title: "Welcome to Mexico City",
           summary:
             "Fly to CDMX and settle into a recommended neighborhood like Polanco, Condesa, or Roma. If time permits, visit the green lungs of the city, Bosque de Chapultepec.",
@@ -492,7 +533,7 @@ export const hollandMexicoTrip: TripPlan = {
           photoAlt: "The lush, tree-lined walking path in the Condesa neighborhood."
         },
         {
-          day: 7,
+          day: 8,
           title: "Historic Core Tour",
           summary:
             "Take a guided tour of the city center. Visit the Diego Rivera murals, the Zocalo, Templo Mayor ruins, and Palacio de Bellas Artes. Lunch at Azul Historico for tortilla soup.",
@@ -525,7 +566,7 @@ export const hollandMexicoTrip: TripPlan = {
           photoAlt: "The massive central plaza of Mexico City with the Metropolitan Cathedral in the background."
         },
         {
-          day: 8,
+          day: 9,
           title: "Museums & Gondolas",
           summary:
             "A packed Saturday! Visit the Anthropology Museum (1.5h) and Soumaya Museum. Shop at the exclusive weekend market El Bazar Sábado, see Frida Kahlo's Blue House in Coyoacán, and ride the Xochimilco gondolas. Dinner at Gabs.",
@@ -558,7 +599,7 @@ export const hollandMexicoTrip: TripPlan = {
           photoAlt: "The bright blue exterior of Frida Kahlo's house."
         },
         {
-          day: 9,
+          day: 10,
           title: "Teotihuacan Pyramids & Guadalupe",
           summary:
             "Early guided start (leave by 5 AM if choosing the hot air balloon) to explore the colossal Teotihuacan pyramids. Focus on the Sun Pyramid (Gate 5) and Quetzalcoatl. Visit the Basilica of Guadalupe on the return.",
@@ -589,7 +630,7 @@ export const hollandMexicoTrip: TripPlan = {
           videoUrl: "https://www.youtube.com/watch?v=evwCuGhN2lU"
         },
         {
-          day: 10,
+          day: 11,
           title: "Free Time in Roma & Condesa",
           summary:
             "Enjoy a free day to wander the hipster, tree-lined neighborhoods of Roma and Condesa, full of cafes and galleries, as well as Parque Chapultepec.",
@@ -626,24 +667,13 @@ export const hollandMexicoTrip: TripPlan = {
       videoUrls: [],
       days: [
         {
-          day: 11,
-          title: "Flight to San Cristóbal",
-          summary:
-            "Take a 1 hour and 15-minute flight to Chiapas. Arrive in the picturesque town of San Cristóbal de las Casas and check into Hotel Bo (highly recommended!).",
-          location: "San Cristóbal de las Casas",
-          travelMode: "flight",
-          photoUrl:
-            "https://commons.wikimedia.org/wiki/Special:FilePath/Aerial_photo_of_the_Andes.jpg",
-          photoAlt: "Aerial views while flying over the mountains."
-        },
-        {
           day: 12,
-          title: "Sumidero Canyon",
+          title: "Flight to San Cristóbal & Sumidero Canyon",
           summary:
-            "Embark on a private or group boat tour through the towering Sumidero Canyon. Your guide will help spot local wildlife like crocodiles and monkeys.",
-          location: "Sumidero Canyon",
-          travelMode: "boat",
-          photos: [
+            "Take a 1 hour and 15-minute flight to Chiapas. From the aiport, Embark on a private or group boat tour through the towering Sumidero Canyon. Your guide will help spot local wildlife like crocodiles and monkeys.",
+          location: "San Cristóbal de las Casas",
+          travelMode: "flight & Van",
+                    photos: [
             {
               url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGDzV_FEOV63LvUBncaZNxAz10As8aYT_IjA&s",
               alt: "The towering cliffs of Sumidero Canyon."
@@ -733,10 +763,21 @@ export const hollandMexicoTrip: TripPlan = {
           summary:
             "Take a 2.5-hour drive to Tepoztlán. Enjoy the vibrant weekend-only market and take an hour-long hike up the mountain to the pyramid at the peak.",
           location: "Tepoztlán",
-          travelMode: "hike",
-          photoUrl:
-            "https://upload.wikimedia.org/wikipedia/commons/9/91/Ollantaytambo_-_Heiliges_Tal.jpg",
-          photoAlt: "A steep mountain hike to ancient ruins."
+          travelMode: "Van",
+          photos: [
+            {
+              url: "https://media.cntraveler.com/photos/5a92fdcdad2a7e3780f2e35e/master/pass/Tepozteco_2018_E3KWPT.jpg",
+              alt: "A steep mountain hike to ancient ruins."
+            },
+            {
+              url: "https://visitmexico.com/media/usercontent/67f9db9fbd1d7-20220908_225140790_iOS_gmxdot_png",
+              alt: "The vibrant market scene in Tepoztlán."
+            },
+            {
+              url: "https://static.dezeen.com/uploads/2026/04/tepoztlan-market-mexico-ramirez-suarez-arquitectos-and-laboratorio-regional-de-arquitectura_dezeen_2364_col_29-852x568.jpg",
+              alt: "Tepoztlán market scene."
+            }
+          ],
         },
         {
           day: 17,

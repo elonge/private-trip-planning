@@ -12,6 +12,9 @@ interface DayCardProps {
   delayMs: number;
 }
 
+const tripStartDateUtc = Date.UTC(2026, 8, 18);
+const weekdayLabels = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
 function resolveDayPhotos(day: TripDay): TripPhoto[] {
   if (day.photos && day.photos.length > 0) {
     return day.photos;
@@ -29,6 +32,13 @@ function resolveDayPhotos(day: TripDay): TripPhoto[] {
   return [];
 }
 
+function formatTripDate(dayNumber: number): string {
+  const date = new Date(tripStartDateUtc);
+  date.setUTCDate(date.getUTCDate() + dayNumber - 1);
+
+  return `${date.getUTCDate()}/${date.getUTCMonth() + 1} ${weekdayLabels[date.getUTCDay()]}.`;
+}
+
 export function DayCard({ day, align, delayMs }: DayCardProps) {
   const embedUrl = useMemo(
     () => (day.videoUrl ? getVideoEmbedUrl(day.videoUrl) : null),
@@ -39,6 +49,7 @@ export function DayCard({ day, align, delayMs }: DayCardProps) {
   const photoCount = photos.length;
   const hasCarousel = photoCount > 1;
   const canOpenCardVideo = canPlayVideo && !hasCarousel;
+  const tripDate = formatTripDate(day.day);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
   const [activePhotoIndex, setActivePhotoIndex] = useState(0);
 
@@ -186,8 +197,8 @@ export function DayCard({ day, align, delayMs }: DayCardProps) {
           ) : null}
 
           <div className="absolute left-3 right-3 top-3 flex items-start justify-between gap-3">
-            <span className="rounded-full bg-linen/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-charcoal">
-              Day {day.day}
+            <span className="rounded-full bg-linen/90 px-3 py-1 text-xs font-bold tracking-[0.08em] text-charcoal">
+              Day {day.day} | {tripDate}
             </span>
             <div className="flex flex-wrap justify-end gap-2">
               {canPlayVideo && hasCarousel ? (
