@@ -4,12 +4,29 @@ import { useEffect, useMemo, useState } from "react";
 
 import { TravelModeIcon } from "@/components/TravelModeIcon";
 import { getVideoEmbedUrl } from "@/lib/video";
-import type { TripDay } from "@/types/trip";
+import type { TripDay, TripPhoto } from "@/types/trip";
 
 interface DayCardProps {
   day: TripDay;
   align: "left" | "right";
   delayMs: number;
+}
+
+function resolveDayPhotos(day: TripDay): TripPhoto[] {
+  if (day.photos && day.photos.length > 0) {
+    return day.photos;
+  }
+
+  if (day.photoUrl) {
+    return [
+      {
+        url: day.photoUrl,
+        alt: day.photoAlt ?? `${day.title} photo`
+      }
+    ];
+  }
+
+  return [];
 }
 
 export function DayCard({ day, align, delayMs }: DayCardProps) {
@@ -18,7 +35,12 @@ export function DayCard({ day, align, delayMs }: DayCardProps) {
     [day.videoUrl]
   );
   const canPlayVideo = Boolean(embedUrl);
+  const photos = resolveDayPhotos(day);
+  const photoCount = photos.length;
+  const hasCarousel = photoCount > 1;
+  const canOpenCardVideo = canPlayVideo && !hasCarousel;
   const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
 
   useEffect(() => {
     if (!isVideoOpen) {
@@ -37,6 +59,10 @@ export function DayCard({ day, align, delayMs }: DayCardProps) {
     };
   }, [isVideoOpen]);
 
+  useEffect(() => {
+    setActivePhotoIndex(0);
+  }, [day.day]);
+
   const openVideo = () => {
     if (canPlayVideo) {
       setIsVideoOpen(true);
@@ -44,7 +70,7 @@ export function DayCard({ day, align, delayMs }: DayCardProps) {
   };
 
   const onCardKeyDown = (event: React.KeyboardEvent<HTMLElement>) => {
-    if (!canPlayVideo) {
+    if (!canOpenCardVideo) {
       return;
     }
 
@@ -54,40 +80,136 @@ export function DayCard({ day, align, delayMs }: DayCardProps) {
     }
   };
 
+  const showPreviousPhoto = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    setActivePhotoIndex((currentIndex) => (currentIndex === 0 ? photoCount - 1 : currentIndex - 1));
+  };
+
+  const showNextPhoto = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    setActivePhotoIndex((currentIndex) => (currentIndex + 1) % photoCount);
+  };
+
+  const selectPhoto = (photoIndex: number) => (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    setActivePhotoIndex(photoIndex);
+  };
+
   return (
     <>
       <article
         className={`group overflow-hidden rounded-2xl border border-charcoal/10 bg-white shadow-[0_26px_70px_-40px_rgba(25,22,20,0.45)] animate-riseIn ${
           align === "left" ? "md:mr-10" : "md:ml-10"
-        } ${canPlayVideo ? "cursor-pointer hover:border-terracotta/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta/45" : ""}`}
+        } ${canOpenCardVideo ? "cursor-pointer hover:border-terracotta/35 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-terracotta/45" : ""}`}
         style={{ animationDelay: `${delayMs}ms` }}
-        onClick={canPlayVideo ? openVideo : undefined}
+        onClick={canOpenCardVideo ? openVideo : undefined}
         onKeyDown={onCardKeyDown}
-        role={canPlayVideo ? "button" : undefined}
-        tabIndex={canPlayVideo ? 0 : undefined}
-        aria-label={canPlayVideo ? `Play video for day ${day.day}: ${day.title}` : undefined}
+        role={canOpenCardVideo ? "button" : undefined}
+        tabIndex={canOpenCardVideo ? 0 : undefined}
+        aria-label={canOpenCardVideo ? `Play video for day ${day.day}: ${day.title}` : undefined}
       >
         <div className="relative h-52 overflow-hidden md:h-64">
-          <img
-            src={day.photoUrl}
-            alt={day.photoAlt}
-            className="absolute inset-0 h-full w-full object-cover transition duration-700 group-hover:scale-[1.03]"
-            loading="lazy"
-            decoding="async"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-charcoal/75 via-charcoal/25 to-transparent" />
-          <div className="absolute bottom-3 left-3 right-3 flex items-end justify-between gap-3">
+          {photos.length > 0 ? (
+            <div
+              className="flex h-full transition-transform duration-500 ease-out"
+              style={{ transform: `translateX(-${activePhotoIndex * 100}%)` }}
+            >
+              {photos.map((photo, photoIndex) => (
+                <div key={`${day.day}-${photoIndex}-${photo.url}`} className="h-full w-full shrink-0">
+                  <img
+                    src={photo.url}
+                    alt={photo.alt}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-sand/75 via-linen to-terracotta/25" />
+          )}
+
+          {hasCarousel ? (
+            <>
+              <button
+                type="button"
+                onClick={showPreviousPhoto}
+                className="absolute left-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-md transition hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                aria-label={`Show previous photo for day ${day.day}`}
+              >
+                <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m15 18-6-6 6-6"
+                    stroke="currentColor"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={showNextPhoto}
+                className="absolute right-3 top-1/2 flex h-8 w-8 -translate-y-1/2 items-center justify-center rounded-full bg-white text-charcoal shadow-md transition hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                aria-label={`Show next photo for day ${day.day}`}
+              >
+                <svg aria-hidden="true" className="h-4 w-4" viewBox="0 0 24 24" fill="none">
+                  <path
+                    d="m9 18 6-6-6-6"
+                    stroke="currentColor"
+                    strokeWidth="2.4"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div className="absolute inset-x-3 bottom-3 flex justify-center gap-1.5">
+                {photos.map((photo, photoIndex) => {
+                  const isActive = photoIndex === activePhotoIndex;
+                  return (
+                    <button
+                      key={`${day.day}-dot-${photoIndex}-${photo.url}`}
+                      type="button"
+                      onClick={selectPhoto(photoIndex)}
+                      className={`h-1.5 w-1.5 rounded-full shadow-sm transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white ${
+                        isActive ? "bg-white" : "bg-white/55 hover:bg-white/80"
+                      }`}
+                      aria-label={`Show photo ${photoIndex + 1} for day ${day.day}`}
+                      aria-pressed={isActive}
+                    />
+                  );
+                })}
+              </div>
+            </>
+          ) : null}
+
+          <div className="absolute left-3 right-3 top-3 flex items-start justify-between gap-3">
             <span className="rounded-full bg-linen/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-charcoal">
               Day {day.day}
             </span>
             <div className="flex flex-wrap justify-end gap-2">
-              {canPlayVideo ? (
-                <span className="rounded-full bg-terracotta/90 px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-linen">
+              {canPlayVideo && hasCarousel ? (
+                <button
+                  type="button"
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    openVideo();
+                  }}
+                  className="rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-charcoal shadow-sm transition hover:bg-linen focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                  aria-label={`Play video for day ${day.day}: ${day.title}`}
+                >
+                  Video
+                </button>
+              ) : null}
+              {canPlayVideo && !hasCarousel ? (
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-charcoal shadow-sm">
                   Video
                 </span>
               ) : null}
               {day.optional ? (
-                <span className="rounded-full bg-olive/85 px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-linen">
+                <span className="rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-[0.13em] text-charcoal shadow-sm">
                   Optional
                 </span>
               ) : null}

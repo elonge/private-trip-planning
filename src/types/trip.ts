@@ -16,14 +16,20 @@ export type TravelMode =
   | "other"
   | (string & {});
 
+export interface TripPhoto {
+  url: string;
+  alt: string;
+}
+
 export interface TripDay {
   day: number;
   title: string;
   summary: string;
   location: string;
   travelMode: TravelMode;
-  photoUrl: string;
-  photoAlt: string;
+  photoUrl?: string;
+  photoAlt?: string;
+  photos?: TripPhoto[];
   note?: string;
   optional?: boolean;
   videoUrl?: string;

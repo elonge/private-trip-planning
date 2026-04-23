@@ -1,15 +1,17 @@
 import type { TripPlan } from "../types/trip";
 
-import { nycMexicoTrip } from "./mexicoTrip";
+import { hollandMexicoTrip } from "./mexicoTrip";
 import { nycCanadaTrip } from "./nycCanadaTrip";
 import { nycRockiesTrip } from "./rockyMountainsTrip";
 import { peruTrip } from "./peruTrip";
+import { frieslandFamilyTrip } from "./Holland";
 
 export const tripPlans = {
   peruTrip,
   nycCanadaTrip,
   nycRockiesTrip,
-  nycMexicoTrip
+  hollandMexicoTrip,
+  frieslandFamilyTrip
 } satisfies Record<string, TripPlan>;
 
 export type TripPlanId = keyof typeof tripPlans;
@@ -18,7 +20,8 @@ const tripDisplayNames: Record<TripPlanId, string> = {
   peruTrip: "Peru Adventure",
   nycCanadaTrip: "NYC + Eastern Canada",
   nycRockiesTrip: "NYC + Canadian Rockies",
-  nycMexicoTrip: "NYC + Mexico"
+  hollandMexicoTrip: "Holland + Mexico",
+  frieslandFamilyTrip: "Friesland Family Trip"
 };
 
 export const defaultTripPlanId: TripPlanId = "nycCanadaTrip";

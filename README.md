@@ -56,9 +56,9 @@ Supported plan ids come from `src/data/trips.ts`.
 - `src/components/Hero.tsx`: full-bleed intro section
 - `src/components/PeruRouteMap.tsx`: interactive OpenStreetMap route map
 - `src/components/PhaseSection.tsx`: per-phase timeline section
-- `src/components/DayCard.tsx`: visual day card with travel mode icon and notes
-- `src/data/peruTrip.ts`: typed 14-day itinerary data with direct `heroPhotoUrl` and `photoUrl` fields
-- `src/types/trip.ts`: public trip and photo interfaces
+- `src/components/DayCard.tsx`: visual day card with travel mode icon, notes, and multi-photo carousel support
+- `src/data/peruTrip.ts`: typed 14-day itinerary data with direct `heroPhotoUrl` and day-level photo fields
+- `src/types/trip.ts`: public trip, day, and photo interfaces
 
 ## Notes
 

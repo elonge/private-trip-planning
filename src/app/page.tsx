@@ -130,7 +130,7 @@ export default async function Home({ searchParams }: HomeProps) {
               Visual Timeline
             </h2>
             <p className="mt-2 text-sm text-charcoal/80 md:text-base">
-              Each day card includes location context, travel mode, and family pacing notes.
+              Each day card includes location context, travel mode, family pacing notes, and photo galleries when available.
             </p>
           </div>
 

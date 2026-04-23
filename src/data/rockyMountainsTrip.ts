@@ -76,6 +76,20 @@ export const nycRockiesTrip: TripPlan = {
             "Arrive in NYC on Sept 16, settle into your Manhattan base, and take an evening walk through the dazzling lights of Times Square.",
           location: "Midtown Manhattan",
           travelMode: "walk",
+          photos: [
+            {
+              url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/97/38/c7/one-of-my-favourite-places.jpg?w=900&h=500&s=1",
+              alt: "Bright billboards and taxis in Times Square."
+            },
+            {
+              url: "https://commons.wikimedia.org/wiki/Special:FilePath/Central_Park_New_York_City_New_York_23_cropped.jpg",
+              alt: "A scenic bridge surrounded by autumn trees in Central Park."
+            },
+            {
+              url: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/29/02/ff/73/caption.jpg?w=1200&h=-1&s=1",
+              alt: "The Gothic arches and suspension cables of the Brooklyn Bridge."
+            }
+          ],
           photoUrl:
             "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/17/97/38/c7/one-of-my-favourite-places.jpg?w=900&h=500&s=1",
           photoAlt: "Bright billboards and taxis in Times Square.",
