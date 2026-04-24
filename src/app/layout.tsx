@@ -4,8 +4,8 @@ import "./globals.css";
 import "leaflet/dist/leaflet.css";
 
 export const metadata: Metadata = {
-  title: "Peru Family Trip Plan",
-  description: "Visual 14-day Peru itinerary with phases, timeline, and curated photos."
+  title: "Holland & Mexico Family Trip Plan",
+  description: "Visual 17-day Holland & Mexico itinerary with phases, timeline, and curated photos."
 };
 
 export default function RootLayout({
